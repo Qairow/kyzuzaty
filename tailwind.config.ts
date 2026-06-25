@@ -11,6 +11,15 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        blush: "var(--blush)",
+        gold: "var(--gold)",
+      },
+      fontFamily: {
+        display: ["var(--font-display)", "serif"],
+        body: ["var(--font-body)", "sans-serif"],
+      },
+      boxShadow: {
+        soft: "0 18px 40px rgba(125, 102, 77, 0.12)",
       },
     },
   },
