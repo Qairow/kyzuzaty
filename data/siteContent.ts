@@ -31,16 +31,16 @@ export const content = {
     musicBadgePlay: "Play",
     musicBadgeStop: "Stop",
     invitationTitle: "Қыз ұзату",
-    heroTitle: "Дана & Нұрканат",
+    heroTitle: "Dana & Нұрканат",
     heroSubtitle: "Ізгі ниетпен қыз ұзату кешіне шақырамыз",
     sectionLabel: "QYZ UZATU",
-    brideName: "Дана",
+    brideName: "Dana",
 
     // Greeting section
     greetingGreeting: "Құрметті қонақтар!",
-    greetingText: "Vadim және Gulmira сіздерді Дана қыз ұзатуына шақырады.",
+    greetingText: "Vadim және Gulmira сіздерді Dana қыз ұзатуына шақырады.",
     greetingTextSecondary:
-      "Ұлттық дәстүр мен отбасы жылуы тоғысқан бұл кеште Дананың жаңа өмірге қадам басуына куә болып, ақ баталарыңызды беруіңізді тілейміз.",
+      "Ұлттық дәстүр мен отбасы жылуы тоғысқан бұл кеште Dananyn жаңа өмірге қадам басуына куә болып, ақ баталарыңызды беруіңізді тілейміз.",
 
     // Calendar section
     calendarMonths: [
@@ -109,14 +109,14 @@ export const content = {
     musicBadgePlay: "Play",
     musicBadgeStop: "Stop",
     invitationTitle: "Қыз ұзату",
-    heroTitle: "Дана & Нұрканат",
+    heroTitle: "Dana & Нұрканат",
     heroSubtitle: "С теплом приглашаем вас на вечер қыз ұзату",
     sectionLabel: "QYZ UZATU",
-    brideName: "Дана",
+    brideName: "Dana",
 
     // Greeting section
     greetingGreeting: "Дорогие гости!",
-    greetingText: "Vadim и Gulmira искренне приглашают вас на Дана қыз ұзату.",
+    greetingText: "Vadim и Gulmira искренне приглашают вас на Dana қыз ұзату.",
     greetingTextSecondary:
       "Будем счастливы, если в этот вечер, наполненный теплом и национальными традициями, вы разделите с нами радость и подарите Дане свои добрые благословения.",
 
