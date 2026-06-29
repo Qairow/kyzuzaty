@@ -7,6 +7,12 @@
   --foreground: #3d342d;
   --blush: #d4a5a5;
   --gold: #c9a876;
+  --gold-soft: #e3c386;
+  --coffee-dark: #5c4332;
+  --coffee-light: #8c6b4f;
+  --cream: #f5efe3;
+  --cream-foreground: #4a3a2c;
+  --text-muted: #d9cbb8;
 }
 
 * {
@@ -38,5 +44,20 @@ a:focus-visible {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .bg-marble {
+    background-color: var(--coffee-dark);
+    background-image: radial-gradient(circle at 12% 8%, rgba(255, 255, 255, 0.08), transparent 40%),
+      radial-gradient(circle at 88% 0%, rgba(255, 255, 255, 0.05), transparent 45%),
+      radial-gradient(circle at 50% 105%, rgba(0, 0, 0, 0.3), transparent 55%),
+      linear-gradient(165deg, var(--coffee-light) 0%, #6e5038 45%, var(--coffee-dark) 100%);
+  }
+
+  .bg-marble-light {
+    background-color: var(--cream);
+    background-image: radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.8), transparent 45%),
+      radial-gradient(circle at 92% 100%, rgba(201, 168, 118, 0.14), transparent 50%),
+      linear-gradient(180deg, #fbf7f0 0%, var(--cream) 100%);
   }
 }

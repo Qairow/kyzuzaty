@@ -25,11 +25,17 @@ function getTimeLeft(): TimeLeft {
   };
 }
 
+const INITIAL_TIME_LEFT: TimeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+
 export function Countdown() {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(getTimeLeft);
+  // Start from a static value so server and first client render match exactly;
+  // the real, time-dependent value is only computed after mount.
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(INITIAL_TIME_LEFT);
   const { t } = useLanguage();
 
   useEffect(() => {
+    setTimeLeft(getTimeLeft());
+
     const timer = window.setInterval(() => {
       setTimeLeft(getTimeLeft());
     }, 1000);
@@ -52,12 +58,12 @@ export function Countdown() {
       {items.map((item) => (
         <div
           key={item.label}
-          className="rounded-[1.75rem] border border-gold/20 bg-white/80 px-5 py-6 text-center shadow-soft"
+          className="rounded-[1.75rem] border border-gold/30 bg-white/10 px-5 py-6 text-center shadow-soft backdrop-blur-sm"
         >
           <div className="font-display text-3xl text-gold sm:text-4xl">
             {String(item.value).padStart(2, "0")}
           </div>
-          <div className="mt-2 text-xs uppercase tracking-[0.3em] text-foreground/60">
+          <div className="mt-2 text-xs uppercase tracking-[0.3em] text-muted">
             {item.label}
           </div>
         </div>

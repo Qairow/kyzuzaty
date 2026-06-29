@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 
 import { useLanguage } from "@/contexts/LanguageContext";
 
-export function MusicToggle() {
+export function MusicToggle({ variant = "icon" }: { variant?: "icon" | "badge" }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const { t } = useLanguage();
@@ -30,14 +30,36 @@ export function MusicToggle() {
     }
   };
 
+  const audioElement = (
+    <audio
+      ref={audioRef}
+      src="/music/wedding.mp3"
+      preload="none"
+      onEnded={() => setIsPlaying(false)}
+    />
+  );
+
+  if (variant === "badge") {
+    return (
+      <div>
+        {audioElement}
+        <button
+          type="button"
+          onClick={togglePlayback}
+          aria-label={isPlaying ? t.musicPause : t.musicPlay}
+          className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/70 bg-coffeeDark/40 text-cream shadow-soft backdrop-blur-sm transition hover:bg-coffeeDark/60"
+        >
+          <span className="text-[10px] uppercase tracking-[0.15em]">
+            {isPlaying ? t.musicBadgeStop : t.musicBadgePlay}
+          </span>
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div className="flex items-center gap-3">
-      <audio
-        ref={audioRef}
-        src="/music/wedding.mp3"
-        preload="none"
-        onEnded={() => setIsPlaying(false)}
-      />
+      {audioElement}
       <button
         type="button"
         onClick={togglePlayback}
