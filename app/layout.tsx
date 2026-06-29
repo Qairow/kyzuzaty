@@ -17,7 +17,7 @@ const bodyFont = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Қыз ұзату | Dana & Нұрканат",
+  title: "Қыз ұзату | Dana & Nurkanat",
   description: "Двуязычное приглашение на қыз ұзату Даны и Нұрканата.",
 };
 
