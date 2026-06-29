@@ -31,7 +31,7 @@ export const content = {
     musicBadgePlay: "Play",
     musicBadgeStop: "Stop",
     invitationTitle: "Қыз ұзату",
-    heroTitle: "Dana & Нұрканат",
+    heroTitle: "Dana & Nurkanat",
     heroSubtitle: "Ізгі ниетпен қыз ұзату кешіне шақырамыз",
     sectionLabel: "QYZ UZATU",
     brideName: "Dana",
